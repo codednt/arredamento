@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POTI Arredamenti - Dal 1955</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo-container">
+                <img src="logo.png" alt="POTI Arredamenti" class="logo">
+            </div>
+            <div class="nav-wrapper">
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">Chi Siamo</a></li>
+                        <li><a href="#collezioni" class="nav-link">Le Nostre Collezioni</a></li>
+                        <li><a href="#marchi" class="nav-link">I Nostri Marchi</a></li>
+                        <li><a href="#su-misura" class="nav-link">Su Misura</a></li>
+                        <li><a href="#contatti" class="nav-link">Contatti</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                        <li class="nav-extras">
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="language-selector">
+                                <a href="#" class="lang-option active">IT</a>
+                                <span class="lang-separator">|</span>
+                                <a href="#" class="lang-option">EN</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <a href="#" class="btn btn-personal btn-personal-text">Area Personale</a>
+                </div>
+            </div>
+            <a href="#" class="btn btn-personal btn-personal-icon" title="Area Personale"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <div id="page-wrapper">
+
+    <!-- Hero Section - Carousel -->
+    <section id="home" class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide active" style="background-image: url('img/soggiorno.jpg');">
+                    <div class="slide-content">
+                        <h2>Hai un Ambiente Commerciale da Arredare?</h2>
+                        <p>Con POTI Arredamenti Contract arredi il tuo Negozio, Ufficio, Hotel, Residence e B&B</p>
+                        <a href="#contatti" class="btn btn-primary">Scopri di più</a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/3.jpg');">
+                    <div class="slide-content">
+                        <h2>Camerette su Misura per i Tuoi Bambini</h2>
+                        <p>Crea lo spazio perfetto per i tuoi figli con i nostri arredi personalizzati e sicuri</p>
+                        <a href="#su-misura" class="btn btn-primary">Personalizza Ora</a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/5.jpg');">
+                    <div class="slide-content">
+                        <h2>Le Nostre Collezioni Esclusive</h2>
+                        <p>Scopri i nostri stili dal classico elegante al moderno minimalista</p>
+                        <a href="#collezioni" class="btn btn-primary">Esplora Collezioni</a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/7.jpg');">
+                    <div class="slide-content">
+                        <h2>Sostenibilità e Qualità Made in Italy</h2>
+                        <p>Arredi ecologici realizzati con materiali nobili e processi sostenibili dal 1955</p>
+                        <a href="#about" class="btn btn-primary">La Nostra Storia</a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide" style="background-image: url('img/8.jpg');">
+                    <div class="slide-content">
+                        <h2>Arredamenti per Ogni Ambiente</h2>
+                        <p>Dal soggiorno alla camera da letto, dalla cucina all'ufficio: soluzioni complete per la tua casa</p>
+                        <a href="#catalogo" class="btn btn-primary">Vedi Catalogo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="carousel-controls">
+                <div class="carousel-line active" onclick="goToSlide(0)"></div>
+                <div class="carousel-line" onclick="goToSlide(1)"></div>
+                <div class="carousel-line" onclick="goToSlide(2)"></div>
+                <div class="carousel-line" onclick="goToSlide(3)"></div>
+                <div class="carousel-line" onclick="goToSlide(4)"></div>
+            </div>
+
+            <!-- Carousel Navigation -->
+            <button class="carousel-nav carousel-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-nav carousel-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Chi Siamo -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Chi Siamo</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>POTI Arredamenti: Una Tradizione dal 1955</h3>
+                    <p>Da oltre 70 anni, POTI Arredamenti è sinonimo di qualità, eleganza e professionalità nel settore dell'arredamento.</p>
+                    <p>La nostra storia inizia nel 1955 con una visione chiara: fornire ai nostri clienti arredi di eccellenza che uniscono design innovativo e qualità costruttiva superiore.</p>
+                    <p>Oggi, grazie alla dedizione del nostro team e alla fiducia di migliaia di clienti, siamo diventati un punto di riferimento nel panorama dell'arredamento italiano.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>70+</h4>
+                            <p>Anni di Esperienza</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5000+</h4>
+                            <p>Clienti Soddisfatti</p>
+                        </div>
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Prodotti in Catalogo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Materiali Pregiati</h4>
+                        <p>Utilizziamo solo i migliori materiali</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-hammer"></i>
+                        <h4>Artigianalità</h4>
+                        <p>Lavorazione manuale di qualità</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-palette"></i>
+                        <h4>Design Innovativo</h4>
+                        <p>Stili attuali e personalizzati</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h4>Consegna Rapida</h4>
+                        <p>Servizio logistico efficiente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogo Prodotti -->
+    <section id="catalogo" class="catalogo">
+        <div class="container">
+            <h2 class="section-title">Il Nostro Catalogo</h2>
+            <div class="products-grid">
+                <!-- Soggiorni -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('img/soggiorno.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Soggiorni</h3>
+                        <p>Splendidi divani e complementi per il vostro salotto</p>
+                        <a href="#" class="product-link">Scopri di più →</a>
+                    </div>
+                </div>
+
+                <!-- Camere da Letto -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('img/camera.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Camere da Letto</h3>
+                        <p>Letti e arredi eleganti per riposare in serenità</p>
+                        <a href="#" class="product-link">Scopri di più →</a>
+                    </div>
+                </div>
+
+                <!-- Cucine -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('img/cucina.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Cucine</h3>
+                        <p>Cucine moderne e funzionali per la vostra famiglia</p>
+                        <a href="#" class="product-link">Scopri di più →</a>
+                    </div>
+                </div>
+
+                <!-- Uffici -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('img/ufficio.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Uffici</h3>
+                        <p>Soluzioni professionali per il vostro spazio di lavoro</p>
+                        <a href="#" class="product-link">Scopri di più →</a>
+                    </div>
+                </div>
+
+                <!-- Esterni -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('img/esterni.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Esterni</h3>
+                        <p>Arredamenti per giardini, terrazze e spazi esterni</p>
+                        <a href="#" class="product-link">Scopri di più →</a>
+                    </div>
+                </div>
+
+                <!-- Accessori -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('img/accessori.jpg');"></div>
+                    <div class="product-info">
+                        <h3>Accessori</h3>
+                        <p>Complementi e dettagli per personalizzare gli spazi</p>
+                        <a href="#" class="product-link">Scopri di più →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collezioni Speciali -->
+    <section id="collezioni" class="collezioni">
+        <div class="container">
+            <h2 class="section-title">Collezioni Speciali</h2>
+            <div class="collections-grid">
+                <div class="collection-item">
+                    <div class="collection-image" style="background-image: url('img/classico.jpg');"></div>
+                    <h3>Classico Elegante</h3>
+                    <p>Stili tradizionali con materiali pregiati</p>
+                </div>
+                <div class="collection-item">
+                    <div class="collection-image" style="background-image: url('img/moderno.jpg');"></div>
+                    <h3>Moderno Minimalista</h3>
+                    <p>Design contemporaneo e funzionale</p>
+                </div>
+                <div class="collection-item">
+                    <div class="collection-image" style="background-image: url('img/rustico.jpg');"></div>
+                    <h3>Rustico Toscano</h3>
+                    <p>Ispiration dal territorio toscano</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti -->
+    <section id="contatti" class="contatti">
+        <div class="container">
+            <h2 class="section-title">Contattaci</h2>
+            <div class="contatti-content">
+                <div class="contatti-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Indirizzo</h4>
+                        <p><a href="https://maps.google.com/?q=Piazza+Sant'Antonio+175+Novoli+Lecce" target="_blank" style="color: var(--primary-color); text-decoration: none;">Piazza Sant'Antonio, 175<br>Novoli (LE)</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h4>Telefono</h4>
+                        <p><a href="tel:0832712048" style="color: var(--primary-color); text-decoration: none;">0832 712048</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@potiarredamenti.it" style="color: var(--primary-color); text-decoration: none;">info@potiarredamenti.it</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <h4 style="margin: 0 0 10px 0; text-align: center;">Orari</h4>
+                        <button class="orari-toggle" onclick="openOrariModal(event)" style="background-color: var(--primary-color); color: white; padding: 6px 16px; border: none; border-radius: var(--border-radius); cursor: pointer; font-size: 0.85rem; font-weight: 500; transition: var(--transition);">
+                            Visualizza Orari
+                        </button>
+                    </div>
+                </div>
+                <form class="contatti-form">
+                    <input type="text" placeholder="Il tuo nome" required>
+                    <input type="email" placeholder="La tua email" required>
+                    <textarea placeholder="Il tuo messaggio" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>POTI Arredamenti</h4>
+                    <p>Dal 1955 al vostro servizio con qualità e dedizione.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/potiarredamenti"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/_potiarredamenti_/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categoria</h4>
+                    <ul>
+                        <li><a href="#">Soggiorni</a></li>
+                        <li><a href="#">Camere da Letto</a></li>
+                        <li><a href="#">Cucine</a></li>
+                        <li><a href="#">Uffici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Link Utili</h4>
+                    <ul>
+                        <li><a href="#">Chi Siamo</a></li>
+                        <li><a href="#">Catalogo</a></li>
+                        <li><a href="#">Contatti</a></li>
+                        <li><a href="#">Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Iscriviti per ricevere le ultime novità</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="La tua email">
+                        <button type="submit" class="btn btn-primary">Iscriviti</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 POTI Arredamenti. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Orari -->
+    <div id="orariModal" class="orari-modal">
+        <div class="orari-modal-content">
+            <button class="orari-modal-close" onclick="closeOrariModal()">&times;</button>
+            <h3 style="color: var(--primary-color); margin-bottom: 20px; text-align: center;">Orari di Apertura</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <h4 style="color: var(--primary-color); margin-bottom: 15px; text-align: center;">Orari Invernali</h4>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.8;">
+                        <strong>Lun:</strong> 9:00 - 13:00 / 16:30 - 20:30<br>
+                        <strong>Mar:</strong> 16:30 - 20:30<br>
+                        <strong>Mer-Sab:</strong> 9:00 - 13:00 / 16:30 - 20:30<br>
+                        <strong>Domenica:</strong> Chiusi
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary-color); margin-bottom: 15px; text-align: center;">Turni Estivi (Lug-Ago-Set)</h4>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.8;">
+                        <strong>Lun-Ven:</strong> 9:00 - 13:00 / 17:00 - 21:00<br>
+                        <strong>Sab:</strong> 17:00 - 21:00<br>
+                        <strong>Domenica:</strong> Chiusi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div> <!-- #page-wrapper -->
+
+    <script src="script.js"></script>
+</body>
+</html>
