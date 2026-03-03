@@ -1059,6 +1059,10 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 
+    .about-text {
+        text-align: center;
+    }
+
     .about-features {
         grid-template-columns: 1fr;
     }
@@ -1081,6 +1085,15 @@ h1, h2, h3, h4, h5, h6 {
 
     .collections-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contatti-form {
+        align-items: center;
+    }
+
+    .contatti-form input,
+    .contatti-form textarea {
+        width: 100%;
     }
 
     .footer-content {
