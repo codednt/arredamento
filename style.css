@@ -1088,11 +1088,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .contatti-form {
-        align-items: center;
+        align-items: stretch;
     }
 
     .contatti-form input,
-    .contatti-form textarea {
+    .contatti-form textarea,
+    .contatti-form button {
         width: 100%;
     }
 
