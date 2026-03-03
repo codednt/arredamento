@@ -12,17 +12,6 @@ arredamento/
 ├── logo.png         # Logo dell'azienda (da inserire)
 └── README.md        # Questo file
 ```
-
-## 🎨 Come inserire il logo
-
-1. Salva l'immagine del logo di POTI Arredamenti con il nome `logo.png` nella stessa cartella di questo file
-2. L'immagine verrà visualizzata automaticamente nell'header del sito
-
-**Raccomandazioni per il logo:**
-- Formato: PNG con sfondo trasparente (ideale)
-- Dimensioni: circa 200x100px o mantenere le proporzioni
-- Il CSS adatterà automaticamente la dimensione a 60px di altezza
-
 ## 🎯 Sezioni del sito
 
 ### 1. **Header/Navigazione**
@@ -89,57 +78,4 @@ Il sito è completamente responsive e si adatta perfettamente a:
 - **Form validation** per il modulo di contatti
 - **Scroll animations** con fade-in dei card
 - **Indicatore di sezione attiva** nella navigazione
-
-## 🚀 Come utilizzare
-
-1. **Visualizzare il sito:**
-   - Apri `index.html` in un browser
-   - O usa un server locale (consigliato)
-
-2. **Personalizzare il contenuto:**
-   - Modifica i testi in `index.html`
-   - Cambia i colori in `:root` di `style.css`
-   - Aggiungi immagini dei prodotti reali
-
-3. **Modificare i contatti:**
-   - Sezione "Contattaci" nell'HTML
-   - Indirizzo: Via Roma, 123
-   - Telefono: +39 055 123456
-   - Email: info@potiarredamenti.it
-
-## 📝 Suggerimenti per il miglioramento
-
-1. **Aggiungere immagini reali:**
-   - Sostituisci i gradienti nei `.product-image` con vere foto di prodotti
-
-2. **Collegare il form:**
-   - Integra con un servizio email (Mailchimp, SendGrid, ecc.)
-   - O usa un backend server
-
-3. **Aggiungere un gallerij:**
-   - Slider di immagini nella hero section
-   - Galleria lightbox per i prodotti
-
-4. **SEO Optimization:**
-   - Aggiungi meta tags
-   - Ottimizza titoli e descrizioni
-
-5. **Analytics:**
-   - Integra Google Analytics
-   - Traccia il comportamento degli utenti
-
-## 🌐 Supporto Browser
-
-- ✅ Chrome (ultimo)
-- ✅ Firefox (ultimo)
-- ✅ Safari (ultimo)
-- ✅ Edge (ultimo)
-- ✅ Mobile browsers
-
-## 📄 Licenza
-
-Questo modello è creato per l'uso di POTI Arredamenti. Sentiti libero di personalizzarlo come necessario.
-
----
-
 **POTI Arredamenti** - *Dal 1955 al vostro servizio con qualità e dedizione*
