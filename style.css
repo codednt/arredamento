@@ -1008,6 +1008,11 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
     }
 
+    /* Mantiene le linee bianche allo scroll su mobile, evitando che si mimetizzino con lo sfondo blu del tasto */
+    .header.header-scrolled .hamburger span {
+        background-color: white;
+    }
+
     .hamburger span {
         width: 20px;
         margin: 3px 0;
