@@ -19,11 +19,31 @@ const lines = document.querySelectorAll('.carousel-line');
 let autoCarouselTimer;
 
 function showSlide(n) {
+    const slide = slides[n];
+    
+    // Lazy loading: se la slide ha un data-background, lo carichiamo ora
+    if (slide) {
+        const bg = slide.getAttribute('data-background');
+        if (bg) {
+            slide.style.backgroundImage = `url('${bg}')`;
+            slide.removeAttribute('data-background');
+        }
+    }
+
     slides.forEach(slide => slide.classList.remove('active'));
     lines.forEach(line => line.classList.remove('active'));
     
     slides[n].classList.add('active');
     lines[n].classList.add('active');
+
+    // Pre-caricamento intelligente: carica la slide successiva in anticipo
+    const nextIdx = (n + 1) % slides.length;
+    const nextSlide = slides[nextIdx];
+    const nextBg = nextSlide.getAttribute('data-background');
+    if (nextBg) {
+        const img = new Image();
+        img.src = nextBg;
+    }
 }
 
 function nextSlide() {
@@ -83,6 +103,22 @@ if (menuOverlay) {
     menuOverlay.addEventListener('click', closeMenu);
 }
 
+// Gestione scroll header per trasparenza e chiusura automatica menu su resize
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+    } else {
+        header.classList.remove('header-scrolled');
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navList.classList.contains('active')) {
+        closeMenu();
+    }
+});
+
 // Chiudi menu quando clicchi su un link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function() {
@@ -92,14 +128,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
-
-// Pulsante "Esplora il Catalogo"
-const explorBtn = document.querySelector('.btn-primary');
-if (explorBtn) {
-    explorBtn.addEventListener('click', function() {
-        document.querySelector('#catalogo').scrollIntoView({ behavior: 'smooth' });
-    });
-}
 
 // Form contatti
 const contactForm = document.querySelector('.contatti-form');
@@ -206,6 +234,23 @@ window.addEventListener('scroll', function() {
     });
 });
 
+// Aggiungi classe active al link di navigazione per la pagina corrente
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-list .nav-link');
+    const currentPath = window.location.pathname.split('/').pop();
+
+    // Se siamo in una sottopagina (es. collezioni.html o marchi.html)
+    if (currentPath && currentPath !== 'index.html' && currentPath !== '') {
+        navLinks.forEach(link => {
+            // Rimuovi 'active' da tutti i link per sicurezza
+            link.classList.remove('active');
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    }
+});
+
 // Accordeon per gli orari
 function openOrariModal(event) {
     event.preventDefault();
@@ -226,4 +271,4 @@ window.addEventListener('click', function(event) {
     }
 });
 
-console.log('POTI Arredamenti - Sito web caricato con successo!');
+console.log('Sito web caricato con successo!');
